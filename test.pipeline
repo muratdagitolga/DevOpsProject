@@ -1,0 +1,42 @@
+pipeline {
+    agent any
+
+    stages {
+    
+        stage('Clone repository') {
+            steps {
+                
+                git branch: 'main', url: 'https://github.com/muratdagitolga/testpipeline.git'
+                
+                echo "jenkins git çekildi"
+                
+                sh "ls -lat"
+            }
+        }
+    
+        stage('Java Version Test') {
+            steps {
+                sh 'java -version'
+
+                sh "ls -lat"
+            }
+        }
+        
+        stage('Java Build') {
+            steps {
+                sh 'javac Main.java'
+
+                sh "ls -lat"
+                echo "dosya başarılı şekilde build edildi"
+            }
+        }
+        
+        stage('Java Run') {
+            steps {
+                sh 'java Main'
+
+                echo "başarılı"
+            }
+        }
+    }
+}
