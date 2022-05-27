@@ -8,6 +8,8 @@ class Main {
     
     System.out.println(first + " " + second);
 
+    ggfgfg();
+
     // add two numbers
     int sum = first + second;
     System.out.println("The sum is: " + sum);
