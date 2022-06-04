@@ -8,7 +8,7 @@ pipeline {
 
                 git branch: 'hotfix', url: 'https://github.com/muratdagitolga/testpipeline.git'
 
-                echo "jenkins git çekildi"
+                echo "jenkins github testpipeline.git çekildi"
 
                 sh "ls -lat"
             }
@@ -27,7 +27,7 @@ pipeline {
                 sh 'javac Main.java'
 
                 sh "ls -lat"
-                echo "dosya başarılı şekilde build edildi"
+                echo "Dosya başarılı şekilde build edilmiştir."
             }
         }
 
