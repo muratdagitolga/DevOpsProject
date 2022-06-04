@@ -8,7 +8,7 @@ pipeline {
 
                 git branch: 'hotfix', url: 'https://github.com/muratdagitolga/testpipeline.git'
 
-                echo "jenkins github testpipeline.git çekildi"
+                echo "jenkins üzerinden github testpipeline.git çekildi."
 
                 sh "ls -lat"
             }
