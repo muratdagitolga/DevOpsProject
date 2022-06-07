@@ -2,7 +2,7 @@ class PipelineMain {
 
     public static void main(String[] args) {
 
-        /*
+
         // success code
         System.out.println("Enter two numbers");
         int first = 10;
@@ -13,9 +13,9 @@ class PipelineMain {
 
         System.out.println(first + " " + second);
         System.out.println("The sum is: " + summary);
-*/
 
 
+/*
         // success code
         System.out.println("Enter two numbers");
         double first = 10.0;
@@ -26,6 +26,7 @@ class PipelineMain {
 
         System.out.println(first + " " + second);
         System.out.println("The sum is: " + summary);
+         */
 
     }
 
