@@ -5,7 +5,7 @@ class PipelineMain {
         /*
         // success code
         System.out.println("Enter two numbers");
-        int first = 20;
+        int first = 10;
         int second = 20;
 
         // add two numbers
@@ -18,11 +18,11 @@ class PipelineMain {
 
         // success code
         System.out.println("Enter two numbers");
-        int first = 20;
-        int second = 20;
+        double first = 10.0;
+        double second = 20.0;
 
         // add two numbers
-        int summary = add(first, second);
+        double summary = add(first, second);
 
         System.out.println(first + " " + second);
         System.out.println("The sum is: " + summary);
