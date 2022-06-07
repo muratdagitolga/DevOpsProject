@@ -5,7 +5,7 @@ class PipelineMain {
 
         // success code
         System.out.println("Enter two numbers");
-        int first = 10;
+        int first = 30;
         int second = 20;
 
         // add two numbers
