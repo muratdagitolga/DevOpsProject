@@ -1,0 +1,42 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Clone repository') {
+            steps {
+
+                git branch: 'preprod', url: 'https://github.com/muratdagitolga/DevOpsProject.git'
+
+                echo "jenkins git çekildi. Stage: Preprod"
+
+                sh "ls -lat"
+            }
+        }
+
+        stage('Java Version Test') {
+            steps {
+                sh 'java -version'
+
+                sh "ls -lat"
+            }
+        }
+
+        stage('Java Build') {
+            steps {
+                sh 'javac PipelineMain.java'
+
+                sh "ls -lat"
+                echo "dosya başarılı şekilde build edildi"
+            }
+        }
+
+        stage('Java Run') {
+            steps {
+                sh 'java PipelineMain'
+
+                echo "başarılı"
+            }
+        }
+    }
+}
