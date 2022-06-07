@@ -2,18 +2,18 @@ pipeline {
     agent any
 
     stages {
-    
+
         stage('Clone repository') {
             steps {
-                
-                git branch: 'release', url: 'https://github.com/muratdagitolga/testpipeline.git'
-                
-                echo "jenkins git çekildi"
-                
+
+                git branch: 'test', url: 'https://github.com/muratdagitolga/DevOpsProject.git'
+
+                echo "jenkins git çekildi. Stage: Test"
+
                 sh "ls -lat"
             }
         }
-    
+
         stage('Java Version Test') {
             steps {
                 sh 'java -version'
@@ -21,19 +21,19 @@ pipeline {
                 sh "ls -lat"
             }
         }
-        
+
         stage('Java Build') {
             steps {
-                sh 'javac Main.java'
+                sh 'javac PipelineMain.java'
 
                 sh "ls -lat"
                 echo "dosya başarılı şekilde build edildi"
             }
         }
-        
+
         stage('Java Run') {
             steps {
-                sh 'java Main'
+                sh 'java PipelineMain'
 
                 echo "başarılı"
             }
